@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<!-- Test suite: lists the listener and the test classes, run in this order by "mvn test" -->
+<suite name="ParaBank Automation Suite">
+
+    <listeners>
+        <listener class-name="listeners.TestListener"/>
+    </listeners>
+
+    <test name="ParaBank UI Tests">
+        <classes>
+            <class name="tests.RegisterTest"/>
+            <class name="tests.LoginTest"/>
+            <class name="tests.TransferFundsTest"/>
+            <class name="tests.BillPayTest"/>
+        </classes>
+    </test>
+</suite>
