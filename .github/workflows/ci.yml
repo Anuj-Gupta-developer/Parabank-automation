@@ -31,8 +31,7 @@ jobs:
 
       # Google Chrome is pre-installed on ubuntu-latest; Selenium Manager downloads the matching driver
       - name: Run tests in headless Chrome
-        run: mvn -B clean test -Dbrowser=chrome -Dheadless=true
-
+        run: mvn -B clean test -Dbrowser=chrome -Dheadless=true -Dtimeout=20
       # always() = publish the report even when tests fail, so failures (with screenshots) are visible
       - name: Commit updated report
         if: always()
